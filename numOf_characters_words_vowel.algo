@@ -1,0 +1,38 @@
+ALGORITHM numOf_characters_words_vowels
+
+VAR
+    sentence:= "on this day, veil is removed.";
+    // number of characters
+BEGIN
+    numOfCharacter:= sentence.length;
+    WRITE(numOfCharacter);
+END
+
+
+// number of words
+BEGIN
+    words:= sentence.split(" ").length;
+    WRITE(words);
+END
+
+
+// number of vowels
+VAR
+     vowels:STRING:= ['a', 'e', 'i', 'o', 'u'];
+BEGIN
+    function countVowles(sentence) {
+        count:INTEGER:= 0;
+
+        for(x of sentence) {
+            if(vowels.includes(x)) {
+                count++;
+            }
+        }
+END_FOR       
+    WRITE(count)
+    }
+
+Name_of_variable, Name_of_another_variable: numbersOfVowels:= countVowles(sentence);
+END
+
+
